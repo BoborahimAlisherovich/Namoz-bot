@@ -22,3 +22,4 @@ Linux/Mac
 ```shell
 python3 app.py
 ```
+"# orqa-fonni-uchirish-bot"  "# orqa-fonni-uchirish-bot" 
