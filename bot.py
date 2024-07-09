@@ -9,8 +9,8 @@ import logging
 import sys
 from menucommands.set_bot_commands  import set_default_commands
 from baza.sqlite import Database
-from filters.admin import IsBotAdminFilter
-from filters.check_sub_channel import IsCheckSubChannels
+from filterss.admin import IsBotAdminFilter
+from filterss.check_sub_channel import IsCheckSubChannels
 from keyboard_buttons import admin_keyboard
 from aiogram.fsm.context import FSMContext #new
 from states.reklama import Adverts
@@ -130,7 +130,7 @@ async def main() -> None:
     bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
     db = Database(path_to_db="main.db")
     db.create_table_users()
-    db.create_table_audios()
+    # db.create_table_audios()
     await set_default_commands(bot)
     await dp.start_polling(bot)
     setup_middlewares(dispatcher=dp, bot=bot)
