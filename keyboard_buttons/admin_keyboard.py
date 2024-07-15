@@ -26,22 +26,15 @@ admin_button = ReplyKeyboardMarkup(
 start_button = ReplyKeyboardMarkup(
     keyboard=[
 
-         [KeyboardButton(text="TAHORAT"), ],
-            [KeyboardButton(text="G'USL"), ],
-            [KeyboardButton(text="Tayammum"), ],
+         [KeyboardButton(text="TAHORAT"), ],            
+        [KeyboardButton(text="G'USL"), ],
+        [KeyboardButton(text="Tayammum"), ],
         [KeyboardButton(text="🕋NOMOZ O'QISHNI O'RGANISH🤲"), ],
         [KeyboardButton(text="⌛️NAMOZ VAQTLARI⌛️"), ],
          [KeyboardButton(text="QO'SHIMCHA SURALAR VA DUOLAR"), ],
-         [KeyboardButton(text="JAMOAT NAMOZLARI"), ],
-
-
-
-       
-        
-           
-
+         [KeyboardButton(text="JAMOAT NAMOZLARI"), ]      
     ],
- resize_keyboard=True, 
+    resize_keyboard=True, 
     input_field_placeholder="o'zingizga keraklisini tanlang"
 )
 

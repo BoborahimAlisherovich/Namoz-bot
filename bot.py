@@ -339,8 +339,7 @@ async def valyuta_back(callback: CallbackQuery):
 All`ohu l`a il`aha ill`a huval hayyul qoyy`um. L`a ta'xuzuh`u sinatuv-va l`a na`vm. Lahu m`a fis-sam`av`ati va m`a fil arz. Manzallaz`iy yashfa'u ‘indah`u ill`a bi'iznih. Ya'lamu m`a bayna ayd`ihim va m`a xolfahum va l`a yux`it`una bi shay'im-min ‘ilmih`i ill`a bima sh`a'a. Vasi'a kursiyyuhus-sam`av`ati val arz. Va l`a ya'`uduh`u hifzuhum`a va huval ‘alliyyul ‘az`iym.
         <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/15' >.</a> 
 """) 
-
-
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/56' >.</a> ")
 
 
 @dp.callback_query(F.data == 'duo')
@@ -375,6 +374,7 @@ async def valyuta_back(callback: CallbackQuery):
 Ibn Ma'sud: “Tabib (ya'ni, Alloh) meni betob qildi”, deb javob qildi. Usmon ibn Affon: “U holda senga hadya buyurtiraymi?” deb so‘radi. “Unga hojatim yo‘q”, dedi Ibn Ma'sud Usmon ibn Affon: “Senda hojat bo‘lmasa, sendan keyin qizlaringga qoladi”, dedi. Ibn Mas'ud bunga javoban: “Qizlarimning kambag‘al bo‘lib qolishlaridan qo‘rqayapsanmi? Men ularga har kechada Voqea surasini o‘qishni buyurganman. Chunki Rasululloh sollallohu alayhi vasallamning: “Kimki har kechada Voqea surasini o‘qisa, zinhor qashshoqlikka uchramaydi”, deganlarini eshitganman”, deb javob berdi”.                                 
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/24' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/55' >.</a> ")
 
 @dp.callback_query(F.data == 'qunut')
 async def valyuta_back(callback: CallbackQuery):
@@ -384,6 +384,7 @@ Allohumma innaa nastaʼiynuka va nastagʻfiruk. Va nuʼminu bik va natavakkalu a
                                   
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/25' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/53' >.</a> ")
 
 @dp.callback_query(F.data == 'yasin')
 async def valyuta_back(callback: CallbackQuery):
@@ -397,6 +398,7 @@ Rasululloh sollallohu alayhi va sallam: “Kim kun avvalida Yosin surasini o‘q
 Abu Hurayra roziyallohu anhudan rivoyat qilingan hadisda: “Kim Yosin surasini tunda o‘qisa, o‘sha kechada gunohlari mag‘firat etiladi”, deyilgan                                                                    
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/26' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/52' >.</a> ")
 
 
 @dp.callback_query(F.data == 'mulk')
@@ -408,6 +410,7 @@ Abu Hurayra roziyallohu anhudan rivoyat qilinadi. Nabiy sollallohu alayhi vasall
                                   
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/27' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/51' >.</a> ")
     
 
 @dp.callback_query(F.data == 'sano')
@@ -417,6 +420,7 @@ async def valyuta_back(callback: CallbackQuery):
 Subhaanakalloouhumma va bihamdika va tabaaro kasmuka va ta’aalaa jadduka va laa ilaaha g‘oyruk                       
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/29' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/50' >.</a> ")
 
 @dp.callback_query(F.data == 'fotiha')
 async def valyuta_back(callback: CallbackQuery):
@@ -425,6 +429,7 @@ async def valyuta_back(callback: CallbackQuery):
                  Suraning oʻnga yaqin nomlari boʻlib, ulardan eng mashhuri „Fotiha“, yaʼni, „ochuvchi“ — suralarning joylashishi boʻyicha avvalida qoʻyilgani uchun unga shu nom berilgan. „Al-Hamdu“ soʻzi bilan boshlangani uchun bu nom bilan ham ataladi. Islom dini mafkurasi va ahkomlarini muxtasar shaklda oʻzida mujassam etgani uchun „Ummul-Qurʼon“, yaʼni „Qurʼonning onasi“ nomi berilgan. Mazkur yetti oyatni sharhlab baʼzi mufassirlar bir necha jildlik asar yozib qoldirganlar.                 
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/30' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/49' >.</a> ")
 
 
 @dp.callback_query(F.data == 'fil')
@@ -434,6 +439,7 @@ async def valyuta_back(callback: CallbackQuery):
          Fil surasi (arabcha: سورة الفيل, nomining maʼnosi — Fil (hayvon)[8][9]) — Qurʼonning 105-surasi. Makkiy suralardan biri, 5 oyatdan iborat. Bu sura Qurʼonning 601[10]-sahifasida va 30-juzida joylashgan. 19-boʻlib nozil boʻlgan.                         
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/31' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/48' >.</a> ")
 @dp.callback_query(F.data == 'quraysh')
 async def valyuta_back(callback: CallbackQuery):
    
@@ -441,6 +447,7 @@ async def valyuta_back(callback: CallbackQuery):
      Quraysh surasi (arabcha: سورة قريش, nomining maʼnosi — Quraysh (qabila)[8][9]) — Qurʼonning 106-surasi. Makkiy suralardan biri, 4 oyatdan iborat. Bu sura Qurʼonning 602[10]-sahifasida va 30-juzida joylashgan. 29-boʻlib nozil boʻlgan.                          
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/32' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/47' >.</a> ")
 
 @dp.callback_query(F.data == 'kavsar')
 async def valyuta_back(callback: CallbackQuery):
@@ -452,6 +459,7 @@ lirobbika vanhar. Inna sh`ania’ka
 huval abtar.                                
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/33' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/46' >.</a> ")
 
 
 @dp.callback_query(F.data == 'kofirun')
@@ -461,6 +469,7 @@ async def valyuta_back(callback: CallbackQuery):
 Kofirun surasi (arabcha: سورة الكافرون, nomining maʼnosi — Kofirlar[8][9]) — Qurʼonning 109-surasi. Makkiy suralardan biri, 6 oyatdan iborat. Bu sura Qurʼonning 603[10]-sahifasida va 30-juzida joylashgan. 18-boʻlib nozil boʻlgan.                               
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/34' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/45' >.</a> ")
     
 @dp.callback_query(F.data == 'ixlos')
 async def valyuta_back(callback: CallbackQuery):
@@ -469,6 +478,7 @@ async def valyuta_back(callback: CallbackQuery):
 “Ixlos” so‘zi aslida, arabcha so‘z bo‘lib, u “xolos bo‘lish”, “muxlis”, “xolis” degan ma’nolarni anglatadi.  Bu haqda “O‘zbek tilining izohli lug‘ati”da:“Ixlos (arabcha) – samimiylik, ko‘ngli ochiqlik, berilganlik, muxlislik, e’tiqod, chin yurakdan, ishonch bilan berilish; astoydil muhabbat” deb izohlanadi.                         
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/35' >.</a> 
 """) 
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/44' >.</a> ")
 
 @dp.callback_query(F.data == 'falaq')
 async def valyuta_back(callback: CallbackQuery):
@@ -483,6 +493,7 @@ Va min sharrin-naff`as`ati fil
 hasad.                       
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/36' >.</a> 
 """) 
+    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/43' >.</a> ")
     
 
 @dp.callback_query(F.data == 'nas')
@@ -491,14 +502,18 @@ async def valyuta_back(callback: CallbackQuery):
     await callback.message.answer(text="""
 Nos surasi (arabcha: سورة الناس, Odamlar) — — Qurʼoni Karimning 114-chi surasi. Makkada nozil boʻlga 6 oyatdan iborat.    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/37' >.</a> 
 """) 
+    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/42' >.</a> ")
+    
 @dp.callback_query(F.data == 'nasr')
 async def valyuta_back(callback: CallbackQuery):
    
     await callback.message.answer(text="""
+                                  
 Nasr surasi (arabcha: سورة النصر, nomining maʼnosi — Yordam[8][9]) — Qurʼonning 110-surasi. Madaniy suralardan biri, 3 oyatdan iborat. Bu sura Qurʼonning 603[10]-sahifasida va 30-juzida joylashgan. 114-boʻlib nozil boʻlgan.
             <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/38' >.</a> 
+                   
 """) 
-
+    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/41' >.</a> ")
 #-----=============== jamoat namozlari-------------===================
 @dp.message(F.text == "JAMOAT NAMOZLARI")
 async def massaeg(messaga:Message):
