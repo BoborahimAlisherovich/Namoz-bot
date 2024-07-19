@@ -28,11 +28,13 @@ start_button = ReplyKeyboardMarkup(
 
          [KeyboardButton(text="TAHORAT"), ],            
         [KeyboardButton(text="G'USL"), ],
-        [KeyboardButton(text="Tayammum"), ],
+        [KeyboardButton(text="TAYAMMUM"), ],
+        [KeyboardButton(text="AYOLLAR UCHUN TAHORAT"), ],
         [KeyboardButton(text="🕋NOMOZ O'QISHNI O'RGANISH🤲"), ],
         [KeyboardButton(text="⌛️NAMOZ VAQTLARI⌛️"), ],
          [KeyboardButton(text="QO'SHIMCHA SURALAR VA DUOLAR"), ],
-         [KeyboardButton(text="JAMOAT NAMOZLARI"), ]      
+         [KeyboardButton(text="JAMOAT NAMOZLARI"), ],
+         [KeyboardButton(text="DIQQATNI JAMLASH"), ]       
     ],
     resize_keyboard=True, 
     input_field_placeholder="o'zingizga keraklisini tanlang"
@@ -54,7 +56,7 @@ qushimcha = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Oyatal kursi", callback_data="oyat"),
         InlineKeyboardButton(text="Qunut duasi", callback_data="qunut")],
-         [InlineKeyboardButton(text="Namozdan kiyingi dualar", callback_data="duo"),
+         [InlineKeyboardButton(text="Namozdan kiyingni duolar", callback_data="duo"),
         InlineKeyboardButton(text="Ya'siyn surasi", callback_data="yasin")],
          [InlineKeyboardButton(text="Voqea surasi", callback_data="voqea"),
         InlineKeyboardButton(text="Mulk(Taborak)", callback_data="mulk")],
@@ -65,9 +67,10 @@ qushimcha = InlineKeyboardMarkup(
         [InlineKeyboardButton(text="Kavsar surasi", callback_data="kavsar"),
         InlineKeyboardButton(text="Kofirun surasi", callback_data="kofirun")],
          [InlineKeyboardButton(text="Ixlos surasi", callback_data="ixlos"),
-        InlineKeyboardButton(text="falaq surasi", callback_data="falaq")],
+        InlineKeyboardButton(text="Falaq surasi", callback_data="falaq")],
          [InlineKeyboardButton(text="Nas surasi", callback_data="nas"),
         InlineKeyboardButton(text="Nasr surasi", callback_data="nasr")],
+        [InlineKeyboardButton(text="🏠 Bosh Menyu",callback_data="qaytish")],
         
             
     ]
@@ -78,7 +81,9 @@ qushimcha = InlineKeyboardMarkup(
 tanlash_ = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="ERKAKLAR UCHUN NAMOZ", callback_data="erkak_namozi")],
-        [InlineKeyboardButton(text="AYOLLAR UCHUN NAMOZ", callback_data="ayol_namoz")]
+        [InlineKeyboardButton(text="AYOLLAR UCHUN NAMOZ", callback_data="ayol_namoz")],
+        [InlineKeyboardButton(text="🏠 Bosh Menyu",callback_data="qaytish")],
+
         
             
     ]
@@ -130,6 +135,9 @@ erkak_namoz = InlineKeyboardMarkup(
         [InlineKeyboardButton(text="Asr nomozi",callback_data="asr")],
         [InlineKeyboardButton(text="Shom nomozi",callback_data="shom")],
         [InlineKeyboardButton(text="Xufton nomozi",callback_data="xufton")],
+        [InlineKeyboardButton(text="Istixora nomozi",callback_data="istixora")],
+        [InlineKeyboardButton(text="Hojat nomozi",callback_data="hojat")],
+        [InlineKeyboardButton(text="🏠 Bosh Menyu",callback_data="qaytish")],
     ]
 )
 
@@ -141,6 +149,9 @@ ayol_namoz = InlineKeyboardMarkup(
         [InlineKeyboardButton(text="Asr nomozi",callback_data="asr2")],
         [InlineKeyboardButton(text="Shom nomozi",callback_data="shom2")],
         [InlineKeyboardButton(text="Xufton nomozi",callback_data="xufton2")],
+        [InlineKeyboardButton(text="Istixora nomozi",callback_data="istixora2")],
+        [InlineKeyboardButton(text="Hojat nomozi",callback_data="hojat2")],
+        [InlineKeyboardButton(text="🏠 Bosh Menyu",callback_data="qaytish")],
     ]
 )
 
@@ -151,6 +162,7 @@ jamoat = InlineKeyboardMarkup(
         InlineKeyboardButton(text="QURBON HAYIT NAMOZI",callback_data="ied")],
          [InlineKeyboardButton(text="JANOZA NAMOZI",callback_data="janoza"),
          InlineKeyboardButton(text="TAROVIH NAMOZI",callback_data="tarovih")],
+        [InlineKeyboardButton(text="🏠 Bosh Menyu",callback_data="qaytish")],
 
        
     ]

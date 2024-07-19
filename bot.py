@@ -3,6 +3,7 @@ from filterss.check_sub_channel import IsCheckSubChannels
 from states.reklama import Adverts
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 import time 
+
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart,Command
@@ -119,6 +120,18 @@ async def orqa(message:Message):
     await message.delete()
 
 
+
+
+
+#-----diqqat
+@dp.message(F.text=="DIQQATNI JAMLASH")
+async def namoz_vaqti(message:Message):
+    await message.answer(text="""
+Diqqatni pul deya qabul qiling
+Tasavvur qiling, diqqatingiz bu – pul. Bu valyuta sizda cheklangan miqdorda. Kun davomida uni “qimmat” va “qimmat bo‘lmagan” vazifalar uchun sarflashingiz mumkin. Jiddiy ish, mutolaa, siz uchun ahamiyatli vazifalar ko‘proq diqqat birligini talab etadi, biroq arzon turadi. Kam ahamiyatli masalan, ijtimoiy tarmoqlarni varaqlash kamroq diqqatni talab qiladi. Biroq u qimmat turadi. Diqqatning qarama-qarshi jihati ham shundan iborat.
+<a href= 'https://t.me/namoz_uqishni_urganish_Kanal/62' >Bizning kanal</a>  
+""")
+
 #-===========================---G'usl-----================
 @dp.message(F.text == "G'USL")
 async def massaeg(messaga:Message):
@@ -131,17 +144,16 @@ Albatta, ogʻizni yaxshilab chayqash gʻuslning f arzlaridan biri ekani hammaga 
 Burunni yaxshilab, mubolagʻa ila chayish ham gʻuslning farzi hisoblanadi.
 3. Badanning barcha yerini yuvish.
 Butun tanani, biror tuki ostini ham qoʻymay, suv yetkazib yuvish ham gʻuslning farzidir. Gʻuslning farzligi „Moida“ surasidagi: „Agar j unub boʻlsalaringiz, poklaninglar“ (6-oyat) oyatidan olingan. Bunda yuvish imkoni bor barcha joyni poklash maʼnosi bordir. Alloh taolo yana „Niso“ surasida: „Va j unub holingizda ham, to gʻusl qilmaguningizcha (masjidda turmang). Magar yoʻldan oʻtuvchi boʻlsa, mayli“, degan (43-oyat). Ushbu ikki oyatda ogʻiz, burun va badanning barchasini yuvish maʼnosi bor. Abu Hurayra roziyalloxu anhudan rivoyat qilinadi
- <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/39' >.</a>                        
-""")
+ <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/39' >Bizning kanal</a>                        
+""",reply_markup=admin_keyboard.Admin)
 #=====----tayamum--==
-@dp.message(F.text == "Tayammum")
+@dp.message(F.text == "TAYAMMUM")
 async def massaeg(messaga:Message):
     await messaga.answer("""
-"Tayammum” lug‘atda “maqsad qilish” ma’nosini anglatadi. Istilohda esa poklanish maqsadida pok yer jinsi bilan yuzga va ikki qo‘lga tirsaklari bilan qo‘shib mash tortish “tayammum” deb ataladi.
+"Tayammum” lug‘atda “maqsad qilish” ma’nosini anglatadi. Istilohda esa poklanish maqsadida pok yer jinsi bilan yuzga va ikki qo‘lga tirsaklari bilan qo‘shib mash tortish “” deb ataladi.
 
- <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/40' >.</a>   
-""")  
-
+ <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/40' >Bizning kanal</a>   
+""",reply_markup=admin_keyboard.Admin)  
 
 
 #-----------------------------------------------------------------------------------------------------------
@@ -160,8 +172,6 @@ async def erkak_namoz(callback:CallbackQuery):
 @dp.callback_query(F.data=="azon")
 async def azon(callback:CallbackQuery):
     
-
-
     await callback.message.answer(text=""" 
 
 Allohu akbar  اَللهُ أَكْبَر 
@@ -192,7 +202,8 @@ Allohu akbar  اَللهُ أَكْبَر
 
 Allohu akbar اَللهُ أَكْبَر 
 
-La ilaha illalloh لاَ إِلَهَ إِلاَّ الله <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/28' >.</a>
+La ilaha illalloh لاَ إِلَهَ إِلاَّ الله 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/28' >Bizning kanal📢</a>
  """)
     
     await callback.message.answer(text="""
@@ -215,7 +226,9 @@ Peshin (fors.) — kunning yarmi oʻtgan payti va shu paytda oʻqiladigan namoz.
 @dp.callback_query(F.data=="asr")
 async def azon(callback:CallbackQuery):
     await callback.message.answer(text="""
-Asr namozi - Alloh taolo tomonidan farz qilingan namozlardan biri. Bu namozni musulmon kishi har kuni oʻqiydi. Ushbu namoz 4 rakat boʻlib faqat farzdan iborat <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/10' >.</a>
+Asr namozi - Alloh taolo tomonidan farz qilingan namozlardan biri. Bu namozni musulmon kishi har kuni oʻqiydi. Ushbu namoz 4 rakat boʻlib faqat farzdan iborat
+                                   
+                                  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/10' >Bizning kanal📢</a>
         """)    
 
 #shom
@@ -223,7 +236,7 @@ Asr namozi - Alloh taolo tomonidan farz qilingan namozlardan biri. Bu namozni mu
 async def azon(callback:CallbackQuery):
     await callback.message.answer(text="""
 Shom — Quyosh botib, qorongʻulik boshlangan payt va shu vaqtda oʻqiladigan namoz. Sh. namozi Quyosh botgandan boshlab, magʻrib ufqidagi qizil shafaqning koʻrinmay ketadigan vaqtigacha ado etiladi, uch rakat farz va ikki rakat sunnatdan iborat.
-      <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/11' >.</a>                                     """)    
+      <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/11' >Bizning kanal📢</a>                                     """)    
 
 # xufton
 @dp.callback_query(F.data == "xufton")
@@ -231,8 +244,21 @@ async def azon(callback: CallbackQuery):
     await callback.message.answer(text="""
     Xufton (fors. uxlash) — Quyosh botib ufqdagi qizillik yo'qolganidan keyin oʻqiladigan kechki namoz; bomdod namozi vaqti kirgungacha davom etadi.[1]
     Xufton namozi to'rt rakat farz, ikki rakat sunnatdan iborat.[2] Xufton namozining to'rt rakat farzi asr namozining farzi kabi o'qilib, faqat niyatda farq bo'ladi. Xuftonning ikki rakat sunnati ham yuqorida o'rganganimiz bomdod va shom namozlarining ikki rakat sunnatlari kabi bir xil tartibda o'qiladi. Bundan tashqari xufton namozi ōz ichiga 3 rakat vitr vojib namozini ham oladi. Ushbu vitr namozining 3-rakatida Fotiha va zam suralarni o'qigandan keyin "Qunut" duosi ōqiladi.
-        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/12' >.</a>    """)
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/12' >Bizning kanal📢</a>    """)
 
+
+@dp.callback_query(F.data == "istixora")
+async def azon(callback: CallbackQuery):
+    await callback.message.answer(text="""
+Istixora (baʼzan istihora ham deyiladi; arabcha: الاستخارة) — ikki rakaatdan iborat namoz. Ushbu namozdan so'ng musulmon kishi Allohdan maʼlum bir masala boʻyicha toʻgʻri qaror qabul qilishda yordam berishini soʻraydi.
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/59' >Bizning kanal📢</a>    """)
+
+@dp.callback_query(F.data == "hojat")
+async def azon(callback: CallbackQuery):
+    await callback.message.answer(text="""
+ Hojat namozining rakatlari borasida ixtilof qilingan. Molikiy va hanbaliylar nazdida, hojat namozi ikki rakatdir. Hanafiy ulamolar nazdida, hojat namozi to‘rt rakat o‘qiladi. Hanafiy mazhabimizdagi bir qavlda ikki rakat ham deyilgan. Bunga sabab shuki, hojat namozi haqida turli xil rivoyatlar kelgan. Ba’zi kitoblarimizda o‘n ikki rak’at ham deyilgan. Bizningcha, hojat namozining ikki rak’at ekanligi dalil jihatidan kuchlirog‘i bo‘lsa ajabmas. Vallohu a’lam!
+     Zero, hojat namozini ikki rakat o‘qish va unda qanday duo qilish haqidagi rivoyat Abdulloh ibn Abu Avfo va Anas ibn Molik roziyallohu anhumodan naql qilingan. Uni Imom Termiziy o‘zlarining mashhur hadis to‘plamlarida rivoyat qilib keltirganlar. Boshqa rivoyatlarning esa ayrim fiqhiy kitoblarda mazmuni zikr qilingan bo‘lsada, ammo roviysi va qaysi hadis to‘plamida keltirilganligiga ishora qilinmagan.                                 
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/60' >Bizning kanal📢</a>    """)
 
 
 #--------------------------------------------------------------------------------------------------------
@@ -245,7 +271,7 @@ async def ayol_namoz(callback:CallbackQuery):
 
 @dp.callback_query(F.data == "bomdod2")
 async def ayol_namoz(callback:CallbackQuery):
-    await callback.message.answer(text="Bomdod (fors.) — erta tong payti, sahar va shu paytda oʻqiladigan namoz. Bomdod namozi kun chiqish taraf yorishganidan boshlab to kun chiqqunga qadar oʻqiladi.Bamdod namozi ikki rakat sunnat va ikki rakat farzdan iborat. Erta tongda oʻqilgan namozning savobi qolgan namozlarga qaraganda kattaroq boʻladi.Namoz oʻqish musulmonlarning farzi hisoblanadi.    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/2' >.</a> ")
+    await callback.message.answer(text="Bomdod (fors.) — erta tong payti, sahar va shu paytda oʻqiladigan namoz. Bomdod namozi kun chiqish taraf yorishganidan boshlab to kun chiqqunga qadar oʻqiladi.Bamdod namozi ikki rakat sunnat va ikki rakat farzdan iborat. Erta tongda oʻqilgan namozning savobi qolgan namozlarga qaraganda kattaroq boʻladi.Namoz oʻqish musulmonlarning farzi hisoblanadi.    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/2' >Bizning kanal📢</a> ")
 
     
 #peshin
@@ -253,7 +279,7 @@ async def ayol_namoz(callback:CallbackQuery):
 async def azon(callback:CallbackQuery):
     await callback.message.answer(text="""
 Peshin (fors.) — kunning yarmi oʻtgan payti va shu paytda oʻqiladigan namoz. Peshin namozi toʻrt rakat sunnat, toʻrt rakat farz va ikki rakat sunnatdan iborat. Peshin namozi Quyosh qiyomdan ogʻa boshlashidan to asr namozining vaqti kirguncha ado etilad
-                               <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/3' >.</a>     """ )
+                               <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/3' >Bizning kanal📢</a>     """ )
 
 
  #asr
@@ -261,21 +287,21 @@ Peshin (fors.) — kunning yarmi oʻtgan payti va shu paytda oʻqiladigan namoz.
 async def azon(callback:CallbackQuery):
     await callback.message.answer(text="""
 Asr namozi - Alloh taolo tomonidan farz qilingan namozlardan biri. Bu namozni musulmon kishi har kuni oʻqiydi. Ushbu namoz 4 rakat boʻlib faqat farzdan iborat
- <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/4' >.</a>        """)    
+ <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/4' >Bizning kanal📢</a>        """)    
    
 #shom
 @dp.callback_query(F.data=="shom2")
 async def azon(callback:CallbackQuery):
     await callback.message.answer(text="""
 Shom — Quyosh botib, qorongʻulik boshlangan payt va shu vaqtda oʻqiladigan namoz. Sh. namozi Quyosh botgandan boshlab, magʻrib ufqidagi qizil shafaqning koʻrinmay ketadigan vaqtigacha ado etiladi, uch rakat farz va ikki rakat sunnatdan iborat.
-            <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/6' >.</a>                                 """)    
+            <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/6' ><Bizning kanal📢/a>                                 """)    
 # xufton
 @dp.callback_query(F.data == "xufton2")
 async def azon(callback: CallbackQuery):
     await callback.message.answer(text="""
     Xufton (fors. uxlash) — Quyosh botib ufqdagi qizillik yo'qolganidan keyin oʻqiladigan kechki namoz; bomdod namozi vaqti kirgungacha davom etadi.[1]
     Xufton namozi to'rt rakat farz, ikki rakat sunnatdan iborat.[2] Xufton namozining to'rt rakat farzi asr namozining farzi kabi o'qilib, faqat niyatda farq bo'ladi. Xuftonning ikki rakat sunnati ham yuqorida o'rganganimiz bomdod va shom namozlarining ikki rakat sunnatlari kabi bir xil tartibda o'qiladi. Bundan tashqari xufton namozi ōz ichiga 3 rakat vitr vojib namozini ham oladi. Ushbu vitr namozining 3-rakatida Fotiha va zam suralarni o'qigandan keyin "Qunut" duosi ōqiladi.
-     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/5' >.</a>    """)
+     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/5' >Bizning kanal📢</a>    """)
 
 
 
@@ -285,16 +311,30 @@ async def azon(callback: CallbackQuery):
 async def azon(callback: CallbackQuery):
     await callback.message.answer(text="""
     Bomdod namozi ikki rakat sunnat, ikki rakat farz – jami to'rt rakatdan iborat.
-                                    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/2' >.</a> 
+                                    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/2' >Bizning kanal📢</a> 
  """)
     
 @dp.callback_query(F.data == 'xolat')
 async def valyuta_back(callback: CallbackQuery):
     await callback.message.answer(text="""
  Islom dini ayolning jamiyatdagi o'rni va ta'sirini juda katta baholaydi. Chunki ayollar islom ummatining tarbiyachilari hisoblanadi. Shu sababli ularning bilim olishi, ma'naviyati va ilm tarqatishi birinchi o'rindagi masalalardandir. Ayniqsa, ayollar uchun birinchi navbatda o'rganishi farz bo'lgan ilmlar - ularning o'zlariga xos bo'lgan masalalardir.                   
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/7' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/7' >Bizning kanal📢</a> 
 """) 
     
+@dp.callback_query(F.data == "istixora2")
+async def azon(callback: CallbackQuery):
+    await callback.message.answer(text="""
+Istixora (baʼzan istihora ham deyiladi; arabcha: الاستخارة) — ikki rakaatdan iborat namoz. Ushbu namozdan so'ng musulmon kishi Allohdan maʼlum bir masala boʻyicha toʻgʻri qaror qabul qilishda yordam berishini soʻraydi.
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/59' >Bizning kanal📢</a>    """)
+
+@dp.callback_query(F.data == "hojat2")
+async def azon(callback: CallbackQuery):
+    await callback.message.answer(text="""
+ Hojat namozining rakatlari borasida ixtilof qilingan. Molikiy va hanbaliylar nazdida, hojat namozi ikki rakatdir. Hanafiy ulamolar nazdida, hojat namozi to‘rt rakat o‘qiladi. Hanafiy mazhabimizdagi bir qavlda ikki rakat ham deyilgan. Bunga sabab shuki, hojat namozi haqida turli xil rivoyatlar kelgan. Ba’zi kitoblarimizda o‘n ikki rak’at ham deyilgan. Bizningcha, hojat namozining ikki rak’at ekanligi dalil jihatidan kuchlirog‘i bo‘lsa ajabmas. Vallohu a’lam!
+     Zero, hojat namozini ikki rakat o‘qish va unda qanday duo qilish haqidagi rivoyat Abdulloh ibn Abu Avfo va Anas ibn Molik roziyallohu anhumodan naql qilingan. Uni Imom Termiziy o‘zlarining mashhur hadis to‘plamlarida rivoyat qilib keltirganlar. Boshqa rivoyatlarning esa ayrim fiqhiy kitoblarda mazmuni zikr qilingan bo‘lsada, ammo roviysi va qaysi hadis to‘plamida keltirilganligiga ishora qilinmagan.                                 
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/61' >Bizning kanal📢</a>    """)
+
+  
 #-----------------------------------------------------------------------------------------------
 
 @dp.message(F.text == "TAHORAT")
@@ -314,7 +354,7 @@ Tahorat uchun suv hozirlagandan keyin:
 10. Ikkala kaftning orqasi bilan boʻyin masx qilinadi.
 11. Chap qoʻl bilan oʻng oyoqni oshiq qismi bilan qoʻshib, barmoqlar orasini ishqalab 3 marta yuviladi, keyin chap oyoq.
 12. Qibla tomonga qarab, ichida „Ashhadu an La ilaha illallohu va ashhadu anna Muhammadan abduhu va rosuluh“ deyiladi. 
-  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/21' >.</a> 
+  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/21' >Bizning kanal📢</a> 
                          
 """,reply_markup=admin_keyboard.tahorati)
 
@@ -326,6 +366,35 @@ Tahoratning oʻzi ham iboday sanaladi shuning uchun kishi tahoratni mukammal qil
 """,reply_markup=admin_keyboard.Admin)
     
 
+#-=================-aYOLLAR UCHUN TAHORAT--------======================
+@dp.message(F.text == "AYOLLAR UCHUN TAHORAT")
+async def massaeg(messaga:Message):
+    await messaga.answer("""
+Tahorat va unga bog‘liq masalalar
+
+1. Tahoratda to‘rt farz borligiga – qo‘lni yuvish, yuzni yuvish, boshning to‘rtdan biriga mash tortish va oyoqni yuvishning farz ekaniga ahli ilmlar ijmo’ qilganlar .
+2. Kimki, boshning hammasiga mash tortsa, farzni mukammal va go‘zal tarzda bajargan bo‘ladi.
+3. Og‘izga suv olib yuvish, burunga suv tortib burunni chayishlik, quloqlarga mash qilishlik tahorat amallaridandir.
+4. Tahoratda har bir a’zoni yuvish o‘ngdan boshlanishi, soqolga xilol qilish, barmoqlar orasini xilol qilish, misvok ishlatish kabi amallar sunnat ekaniga ahli ilmlar ijmo’ qilganlar.
+5. Namoz vaqti kirishidan ilgari tahorat olgan kishining tahorati komildir.
+6. Har bir namoz uchun yangi tahorat olish mustahabdir.
+7. Gʻuslda ham, tahoratda ham suvni isrof qilishdan qaytarilgan.
+8. Tahoratda ham, g‘uslda ham ishlatiladigan suvning muayyan belgilangan miqdori yo‘qdir. Har kim poklanishi uchun yetarli miqdorda suv ishlatishi kerak.
+9. Tahoratda chap a’zodan boshlab yuvgan kishiga qayta tahorat olish lozim emas.
+10. Tahoratda a’zolarni bir martadan yuvgan kishi agar a’zolarini mukammal yuvsa, bir martasi ham tahoratga kifoya qiladi.
+11. Tahoratda qo‘llarni tirsaklargacha bo‘lgan qismini yuvishlik farz.[2]↴
+12. Tahoratda a’zolarni uch martadan ortiq yuvish zulm (gunoh) dir, magar, nuqsonni to‘ldirish uchun bo‘lgani mustasno.
+13. Hayolparishon bo‘lib tahoratsiz o‘qilgan namoz qaytariladi, namozning farzlaridan biron amalni unutishlik uning farzligini soqit qilmaydi.
+14. Xaloga kirishda "a’uvzu billahi mina-l-xubsi va-l-xobaais", deyishlik mustahabdir.
+15. O‘ng qo‘l bilan istinjo qilish tanzihan makruh.
+16. Istinjo qilishda, avval tosh yoki kesak, so‘ngra, suv ishlatishlik afzaldir.
+17. Suv bilan istinjo qilish sahobalar ijmo’si bilan sunnatdir.
+18. Mukammal tahorat olib, so‘ngra mahsi kiygan kishi keyingi tahorat olishida mahsilariga mash qilishi mumkin.
+19. Tahorat oluvchi kishi bir oyog‘ini yuvgach, bir mahsisini kiysa, so‘ngra keyingi oyoqni yuvib ikkinchi mahsisini kiysa, u kishi tahoratlidir.
+Tayyorlovchi: Muhammadjonova Ziyoda
+Mas’ul: Nozima Ibragimova
+<a href= 'https://t.me/namoz_uqishni_urganish_Kanal/58' >Bizning kanal📢</a> 
+""")
 
 
 #--------------------------------""" Qo'shimcha so'ralar """---------------------------------------------------------------------------------
@@ -335,15 +404,17 @@ async def massaeg(messaga:Message):
 
 @dp.callback_query(F.data == 'oyat')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 All`ohu l`a il`aha ill`a huval hayyul qoyy`um. L`a ta'xuzuh`u sinatuv-va l`a na`vm. Lahu m`a fis-sam`av`ati va m`a fil arz. Manzallaz`iy yashfa'u ‘indah`u ill`a bi'iznih. Ya'lamu m`a bayna ayd`ihim va m`a xolfahum va l`a yux`it`una bi shay'im-min ‘ilmih`i ill`a bima sh`a'a. Vasi'a kursiyyuhus-sam`av`ati val arz. Va l`a ya'`uduh`u hifzuhum`a va huval ‘alliyyul ‘az`iym.
-        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/15' >.</a> 
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/15' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/56' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/56' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 
 @dp.callback_query(F.data == 'duo')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
                                   OYATAL KURSI
 
@@ -362,32 +433,35 @@ KALIMAI TAVHID
 
 L`a il`aha illall`ohu vahdah`u l`a shar`ika lah, lahul mulku va lahul hamd. Va huva ‘al`a kulli shay'in qod`ir.                                  
 
-        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/23' >.</a> 
-""") 
+        <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/23' >Bizning kanal📢</a> 
+""",reply_markup=admin_keyboard.qushimcha) 
 
 
 @dp.callback_query(F.data == 'voqea')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
  Hofiz ibn Asokir Abdulloh ibn Mas'ud haqida shunday rivoyat qiladi: “Abdulloh ibn Ma'sud vafot etishi arafasida betob bo‘lib qoldi. Usmon ibn Affon uning ziyoratiga kelib: “Nimadan shikoyating bor?” deb so‘radi. Ibn Ma'sud: “Gunohlarimdan”, dedi. Usmon ibn Affon: “Nimani xohlaysan?” deb so‘radi. Ibn Ma'sud: “Rabbimning rahmatini”, dedi. Usmon ibn Affon: “Senga tabib buyuraymi?” dedi.
 Ibn Ma'sud: “Tabib (ya'ni, Alloh) meni betob qildi”, deb javob qildi. Usmon ibn Affon: “U holda senga hadya buyurtiraymi?” deb so‘radi. “Unga hojatim yo‘q”, dedi Ibn Ma'sud Usmon ibn Affon: “Senda hojat bo‘lmasa, sendan keyin qizlaringga qoladi”, dedi. Ibn Mas'ud bunga javoban: “Qizlarimning kambag‘al bo‘lib qolishlaridan qo‘rqayapsanmi? Men ularga har kechada Voqea surasini o‘qishni buyurganman. Chunki Rasululloh sollallohu alayhi vasallamning: “Kimki har kechada Voqea surasini o‘qisa, zinhor qashshoqlikka uchramaydi”, deganlarini eshitganman”, deb javob berdi”.                                 
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/24' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/24' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/55' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/55' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'qunut')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 Allohumma innaa nastaʼiynuka va nastagʻfiruk. Va nuʼminu bik va natavakkalu alayk. Va nusniy alaykal xoyro kullah. Nashkuruka va laa nakfuruk. Va naxlaʼu va natruku may yafjuruk. Allohumma iyyaka naʼbudu va laka nusolliy va nasjudu va ilayka nasʼaa va nahfidu. Narjuu rohmatak va naxshaa azaabak. Inna azaabaka bil kuffaari mulhiq. 
                                   
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/25' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/25' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/53' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/53' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'yasin')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 Yosin surasi fazilatlari to‘g‘risida ko‘p hadisi shariflar rivoyat qilingan. Ularda aytilishicha, kimda-kim bu surani ixlos bilan o‘qisa, hojati ravo bo‘ladi, xavf-xatarda bo‘lsa xotirjamlik topadi, kambag‘al bo‘lsa boylikka erishadi, mahbus bo‘lsa ozodlikka chiqadi, qarzdor bo‘lsa qarzini oson uzadi.
@@ -396,92 +470,101 @@ Boshqa hadisda sevikli Payg‘ambarimiz sollallohu alayhi va sallam: “Qaysi bi
 Qaysi bir banda tong otganida Yosin surasini o‘qisa, Alloh uning gunohlarini kechiradi. Bundan tashqari Qur’onni o‘n marta xatm qilish savobini oladi, barcha hojatlari ravo etiladi.
 Rasululloh sollallohu alayhi va sallam: “Kim kun avvalida Yosin surasini o‘qisa, hojatlari ravo etiladi”, deb aytganlar.
 Abu Hurayra roziyallohu anhudan rivoyat qilingan hadisda: “Kim Yosin surasini tunda o‘qisa, o‘sha kechada gunohlari mag‘firat etiladi”, deyilgan                                                                    
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/26' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/26' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/52' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/52' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 
 @dp.callback_query(F.data == 'mulk')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 Taborak (Mulk) surasida yer, osmon va boshqa mavjudotlarni yaratishdagi hikmatlar, Allohning qudrati, bu dunyoda imonsiz o‘tganlarning oxiratdagi afsus-nadomatlari, rizq-ro‘z talab qilish, tabiiy ofatlar – yer yutishi, osmondan balo yog‘ilishi xavfi, hidoyat, zalolat kabi masalalar bayon etilgan.
 Abu Hurayra roziyallohu anhudan rivoyat qilinadi. Nabiy sollallohu alayhi vasallam: “Qur’onda o‘ttiz oyatdan iborat bir sura bor. Kim uni o‘qisa, gunohlari kechirilgunicha shafoat qiladi. U Taborak surasidir”, deganlar (Imom Abu Dovud, Imom Termiziy, Imom Nasoiy rivoyati).                                  
                                   
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/27' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/27' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/51' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/51' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
     
 
 @dp.callback_query(F.data == 'sano')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 Subhaanakalloouhumma va bihamdika va tabaaro kasmuka va ta’aalaa jadduka va laa ilaaha g‘oyruk                       
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/29' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/29' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/50' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/50' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'fotiha')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
                  Suraning oʻnga yaqin nomlari boʻlib, ulardan eng mashhuri „Fotiha“, yaʼni, „ochuvchi“ — suralarning joylashishi boʻyicha avvalida qoʻyilgani uchun unga shu nom berilgan. „Al-Hamdu“ soʻzi bilan boshlangani uchun bu nom bilan ham ataladi. Islom dini mafkurasi va ahkomlarini muxtasar shaklda oʻzida mujassam etgani uchun „Ummul-Qurʼon“, yaʼni „Qurʼonning onasi“ nomi berilgan. Mazkur yetti oyatni sharhlab baʼzi mufassirlar bir necha jildlik asar yozib qoldirganlar.                 
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/30' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/30' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/49' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/49' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 
 @dp.callback_query(F.data == 'fil')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
          Fil surasi (arabcha: سورة الفيل, nomining maʼnosi — Fil (hayvon)[8][9]) — Qurʼonning 105-surasi. Makkiy suralardan biri, 5 oyatdan iborat. Bu sura Qurʼonning 601[10]-sahifasida va 30-juzida joylashgan. 19-boʻlib nozil boʻlgan.                         
     <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/31' >.</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/48' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/48' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 @dp.callback_query(F.data == 'quraysh')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
      Quraysh surasi (arabcha: سورة قريش, nomining maʼnosi — Quraysh (qabila)[8][9]) — Qurʼonning 106-surasi. Makkiy suralardan biri, 4 oyatdan iborat. Bu sura Qurʼonning 602[10]-sahifasida va 30-juzida joylashgan. 29-boʻlib nozil boʻlgan.                          
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/32' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/32' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/47' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/47' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'kavsar')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
   KAVSAR SURASI:
 Inn`a a’toyn`akal-kavsar. Fa solli
 lirobbika vanhar. Inna sh`ania’ka
 huval abtar.                                
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/33' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/33' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/46' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/46' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 
 @dp.callback_query(F.data == 'kofirun')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 Kofirun surasi (arabcha: سورة الكافرون, nomining maʼnosi — Kofirlar[8][9]) — Qurʼonning 109-surasi. Makkiy suralardan biri, 6 oyatdan iborat. Bu sura Qurʼonning 603[10]-sahifasida va 30-juzida joylashgan. 18-boʻlib nozil boʻlgan.                               
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/34' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/34' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/45' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/45' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
     
 @dp.callback_query(F.data == 'ixlos')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 “Ixlos” so‘zi aslida, arabcha so‘z bo‘lib, u “xolos bo‘lish”, “muxlis”, “xolis” degan ma’nolarni anglatadi.  Bu haqda “O‘zbek tilining izohli lug‘ati”da:“Ixlos (arabcha) – samimiylik, ko‘ngli ochiqlik, berilganlik, muxlislik, e’tiqod, chin yurakdan, ishonch bilan berilish; astoydil muhabbat” deb izohlanadi.                         
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/35' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/35' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/44' >.</a> ")
+    await callback.message.answer(text="audio <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/44' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 
 @dp.callback_query(F.data == 'falaq')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
 FALAQ SURASI:
@@ -491,29 +574,31 @@ g‘`osiqin iz`a vaqob.
 Va min sharrin-naff`as`ati fil
 ‘uqod. Va min sharri h`asidin iz`a
 hasad.                       
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/36' >.</a> 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/36' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/43' >.</a> ")
+    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/43' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
     
 
 @dp.callback_query(F.data == 'nas')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
    
     await callback.message.answer(text="""
-Nos surasi (arabcha: سورة الناس, Odamlar) — — Qurʼoni Karimning 114-chi surasi. Makkada nozil boʻlga 6 oyatdan iborat.    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/37' >.</a> 
+Nos surasi (arabcha: سورة الناس, Odamlar) — — Qurʼoni Karimning 114-chi surasi. Makkada nozil boʻlga 6 oyatdan iborat. \
+                   <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/37' >Bizning kanal📢</a> 
 """) 
-    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/42' >.</a> ")
+    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/42' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
     
 @dp.callback_query(F.data == 'nasr')
 async def valyuta_back(callback: CallbackQuery):
-   
+    await callback.message.delete()
     await callback.message.answer(text="""
                                   
 Nasr surasi (arabcha: سورة النصر, nomining maʼnosi — Yordam[8][9]) — Qurʼonning 110-surasi. Madaniy suralardan biri, 3 oyatdan iborat. Bu sura Qurʼonning 603[10]-sahifasida va 30-juzida joylashgan. 114-boʻlib nozil boʻlgan.
-            <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/38' >.</a> 
+            <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/38' >Bizning kanal📢</a> 
                    
 """) 
-    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/41' >.</a> ")
+    await callback.message.answer(text=".  <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/41' >Bizning kanal📢</a> ",reply_markup=admin_keyboard.qushimcha)
 #-----=============== jamoat namozlari-------------===================
 @dp.message(F.text == "JAMOAT NAMOZLARI")
 async def massaeg(messaga:Message):
@@ -523,15 +608,17 @@ async def massaeg(messaga:Message):
 
 @dp.callback_query(F.data == 'juma')
 async def valyuta_back(callback: CallbackQuery):
-    photo = FSInputFile(path="juma.png",filename="p.jpg")
-    await callback.message.answer_photo(photo=photo,caption=" ") 
+    await callback.message.delete()
+    await callback.message.answer(text=" <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/57' >Bizning kanal 📢  </a> ")
+
     await callback.message.answer(text="""
 Juma namozi (arabcha: صَلَاة ٱلْجُمُعَة, Ṣalāt al-Jumuʿah) — Musulmonlarning umumiy namozi. Juma kuni masjidlarda peshin namozi vaqtida oʻqiladi. Juma namozi erkin, voyaga yetgan erkaklarga farzdir. Juma namozi ikki rakat farz boʻlib, undan oldin va keyin toʻrt rakat sunnat oʻqiladi. Ilk va oxirgi sunnatlar peshin namozining sunnatlari kabi oʻqiladi. Imomga iqtido qilib oʻqiladigan ikki rakat farz esa, bomdod namozining farzi kabi oʻqiladi. Ayollar, bolalar va jismoniy zaif kishilar uchun juma namozi shart emas. Ayrim zamonaviy hanafiy ilohiyotshunoslari keksa ayollarning jamoaviy namozga borishini nomaqbul deb hisoblaydilar. Musulmonlarga juma namozini uzrsiz sababsiz tark etish taqiqlangan. Tabiiy ofatlar (qattiq ayoz, qor koʻchkisi xavfi, kuchli yomgʻir va h.k.) yuz berganda juma namozi ixtiyoriy holga keladi. Namozdan oldin musulmon toʻliq tahorat olib, tirnoqlarini kesib, toza, bayramona kiyim kiyishi tavsiya etiladi. Bundan tashqari, mushk sepish tavsiya etiladi. Masjidga kirishdan oldin sarimsoq, piyoz va boshqa oʻtkir hidli yeguliklarni isteʼmol qilish taqiqlanadi. Namozdan oldin ikkinchi azon aytiladi va xutba oʻqiladi. Xutba ikki qismdan iborat. Xutbaning bu qismlari orasida imomning qisqa vaqt oʻtirishi maqsadga muvofiqdir. Xutbadan keyin namozxonlar imomdan keyin ikki rakat namoz oʻqiydilar. Juma namozining oʻqilishi peshin namozini oʻqishdan xalos qiladi. Masjidga kechikib kelish mumkin emas. Eng oxirgi kelgan kishi boshqa dindorlarni bosib oʻtmasligi, qator oralarida yurmasligi va boshqalarni bezovta qilib, oldingi qatorlardan joy olishga harakat qilmasligi kerak. Imom xutba oʻqish uchun minbarga chiqqan bir paytda gaplashib, boshqa odamlarni chalgʻitib boʻlmaydi.[1].
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/13' >.</a> 
-""") 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/13' >Bizning kanal📢</a> 
+""",reply_markup=admin_keyboard.jamoat) 
 
 @dp.callback_query(F.data == 'ied')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Alloh rizoligi uchun  Ramazon hayiti namozini o‘qishga niyat qilinadi.
 
@@ -543,26 +630,28 @@ To‘rtinchi takbirda qo‘l ko‘tarmasdan imom orqasidan ruku va sajda ado qil
 Sajdadan so‘ngra “Attahiyyot”, “Salovat” va “Duo” o‘qilib, salom berilib, namoz tugatiladi.
 Alloh ibodatlaringizni O‘z dargohida qabul etsin!
                                                              
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/22' >.</a> 
-""") 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/22' >Bizning kanal📢</a> 
+""",reply_markup=admin_keyboard.jamoat) 
 
 
 @dp.callback_query(F.data == 'janoza')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Janoza namozi – vafot etgan musulmonlar uchun jamoat boʻlib oʻqiladigan namoz. Mayyit yuvilib, kafanlanadi, masjidga keltiriladi. Jamoatning oldiga yuqoriroq yerga qoʻyiladi. Imom jamoatning oldiga oʻtib Janoza namozini oʻqiydi. Janoza namozini oʻquvchi kishi avval: "Niyat qildim ushbu marhum uchun Janoza namozini oʻqimoqqa, iqtido qildim ushbu imomga. Xolisan lillohi Taolo", deb niyat qiladi. Imom baland ovoz bilan, qolganlar imomga iqtido qilib maxfiy su'ratda (faqatgina o'zi eshitadigan darajada) "Allohu Akbar" deb qoʻllarini bogʻlaydi. Iqtido qilib oʻquvchi aytganini o'zi eshitadigan darajada takbir aytib qoʻllarini bogʻlaydi. Soʻngra ovoz chiqarmasdan "Sano"ni oʻqiydi: "Subhanakallohumma va bihamdika va tabarokasmuka va taʻala jadduka va la ilaha gʻoyruk". Soʻngra imom bilan birgalikda takror takbir aytiladi. Lekin qoʻllar koʻtarilmaydi. Solli va Barik duolari oʻqiladi. Takror yana qoʻllar koʻtarilmagan holda takbir aytiladi, janoza duosi oʻqiladi. Janoza duosini bilmaydiganlar esa, Qunut duosini yoki duo niyati bilan Fotiha surasini oʻqisa ham boʻladi. Soʻngra imom bilan birgalikda takror takbir qilinib oldin oʻngga, keyin chapga salom beriladi. Janoza namozi oʻqilib boʻlganidan keyin mayyit mozorga olib boriladi, qabrga qoʻyiladi, ruhdariga bagʻishlab Qurʼon tilovat va duo qilinadi
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/19' >.</a> 
-""") 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/19' >Bizning kanal📢</a> 
+""",reply_markup=admin_keyboard.jamoat) 
     
 
 @dp.callback_query(F.data == 'tarovih')
 async def valyuta_back(callback: CallbackQuery):
+    await callback.message.delete()
     await callback.message.answer(text="""
 Tarovih – istirohat ma’nosidagi "tarviha" so‘zining ko‘pligidir. To‘rt rakat o‘qib, ortidan dam olingani uchun bu namoz shunday nomlangan.
 Ramazon oyi fazilatlarga boydir. Uning fazilatlaridan biri oy davomida xufton namozidan keyin tarovih namozi o‘qishdir. Payg‘ambarimiz sallallohu alayhi vasallam tarovih namozi haqida shunday deganlar:
 “Alloh taolo Ramazon ro‘zasini farz qildi va men uning qiyomini sizlar uchun sunnat qildim. Kimki iymon va ishonch bilan, savob umidida ro‘za tutsa va kechalari qoim tursa, onadan tug‘ilgan kunidagidek gunohlardan pok bo‘ladi” (Imom Nasoiy rivoyatlari).                                 
-    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/20' >.</a> 
-""") 
+    <a href= 'https://t.me/namoz_uqishni_urganish_Kanal/20' >Bizning kanal📢</a> 
+""",reply_markup=admin_keyboard.jamoat) 
 
 
 #---------------------------------------------------------------------------------------------
@@ -617,5 +706,4 @@ async def main() -> None:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-
     asyncio.run(main())
